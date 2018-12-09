@@ -1,4 +1,5 @@
 import { AdminComponent } from './Admin/admin.component';
+import { GalleryComponent } from './Gallery/gallery.component';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -16,6 +17,7 @@ import { PieChartComponent } from './Dashboard/Charts/piechart.component'
     AppComponent,
     DashboardComponent,
     AdminComponent,
+    GalleryComponent,
     ComboChartComponent,
     PieChartComponent
   ],
