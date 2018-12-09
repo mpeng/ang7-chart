@@ -1,4 +1,4 @@
-<h2>{{title}}</h2>
+<h6>{{title}}</h6>
 
 <form>
     <div class="form-group">
@@ -10,7 +10,7 @@
 
     <div class="form-group">
       <label for="messageBody">Message</label>
-      <textarea class="form-control" name="messageBody" rows="3" [(ngModel)]="messageBody"></textarea>
+      <textarea class="form-control" name="messageBody" rows="5" placeholder="Enter message" [(ngModel)]="messageBody"></textarea>
     </div>
 
     <button (click)="sendMessage()" class="btn btn-primary">Submit</button>

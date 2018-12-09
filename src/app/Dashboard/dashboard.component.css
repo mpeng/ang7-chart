@@ -1,7 +1,6 @@
 /* DivTable.com */
 .divTable{
 	display: table;
-	max-width: 80%;
 }
 .divTableRow {
 	display: table-row;
