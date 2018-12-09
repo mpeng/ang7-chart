@@ -11,6 +11,7 @@ import { GoogleComboChartService } from './Services/google-combo-chart.service';
 import { GooglePieChartService } from './Services/google-pie-chart.service';
 import { NgModule } from '@angular/core';
 import { PieChartComponent } from './Dashboard/Charts/piechart.component'
+import { VisComponent } from './Dashboard/Charts/vis.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { PieChartComponent } from './Dashboard/Charts/piechart.component'
     AdminComponent,
     GalleryComponent,
     ComboChartComponent,
+    VisComponent,
     PieChartComponent
   ],
   imports: [
