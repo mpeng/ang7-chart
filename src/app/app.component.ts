@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'Google Charts demo with Angular 7';
+  title = 'Google Charts demo with Angular 4';
 }
