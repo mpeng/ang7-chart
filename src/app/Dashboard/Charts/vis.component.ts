@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ElementRef, Renderer2 } from '@angular/core';
-declare var vis:any;
+import { Network, Timeline } from 'vis';
+
+//declare var vis:any;
 
 @Component({
   selector: 'app-vis',
@@ -28,7 +30,8 @@ export class VisComponent implements OnInit {
       }
     };
     var container = this.networkContainer.nativeElement;
-    this.network = new vis.Network(container, treedata, options);
+    //this.network = new vis.Network(container, treedata, options);
+    this.network = new Network(container, treedata, options);
 
     var that = this;
     this.network.on("hoverNode", function (params) {

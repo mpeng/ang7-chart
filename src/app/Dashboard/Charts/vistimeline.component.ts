@@ -1,5 +1,7 @@
 import { AfterViewInit, Component, OnInit, ElementRef, ViewChild } from '@angular/core';
-declare var vis:any;
+import { Network, DataSet, Node, Edge, IdType, Timeline } from 'vis';
+
+//declare var vis:any;
 
 @Component({
   selector: 'app-vistimeline',
@@ -23,12 +25,14 @@ export class VistimelineComponent implements OnInit {
 
   ngAfterViewInit() {
     this.tlContainer = this.timelineContainer.nativeElement;
-    this.timeline = new vis.Timeline(this.tlContainer, this.data, {});
+    //this.timeline = new vis.Timeline(this.tlContainer, this.data, {});
+    this.timeline = new Timeline(this.tlContainer, this.data, {});
   }
 
   getTimelineData() {
     // Create a DataSet (allows two way data-binding)
-    this.data = new vis.DataSet([
+    //this.data = new vis.DataSet([
+      this.data = new DataSet([
       {id: 1, content: 'exam 1', start: '2018-04-20', title: "total images 6"},
       {id: 2, content: 'exam 2', start: '2018-04-14', title: "total images 6"},
       {id: 3, content: 'exam 3', start: '2018-04-18'},
