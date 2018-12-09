@@ -12,6 +12,7 @@ import { GooglePieChartService } from './Services/google-pie-chart.service';
 import { NgModule } from '@angular/core';
 import { PieChartComponent } from './Dashboard/Charts/piechart.component'
 import { VisComponent } from './Dashboard/Charts/vis.component';
+import { VistimelineComponent } from './Dashboard/Charts/vistimeline.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { VisComponent } from './Dashboard/Charts/vis.component';
     GalleryComponent,
     ComboChartComponent,
     VisComponent,
+    VistimelineComponent,
     PieChartComponent
   ],
   imports: [
