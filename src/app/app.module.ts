@@ -13,6 +13,7 @@ import { NgModule } from '@angular/core';
 import { PieChartComponent } from './Dashboard/Charts/piechart.component'
 import { VisComponent } from './Dashboard/Charts/vis.component';
 import { VistimelineComponent } from './Dashboard/Charts/vistimeline.component';
+import { SurfaceComponent } from './Dashboard/Charts/surface.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { VistimelineComponent } from './Dashboard/Charts/vistimeline.component';
     ComboChartComponent,
     VisComponent,
     VistimelineComponent,
+    SurfaceComponent,
     PieChartComponent
   ],
   imports: [

@@ -62,14 +62,5 @@ export class VistimelineComponent implements OnInit {
         axis: 40
       }
     };
-    // Configuration for the Timeline
-    /*this.options = {
-     width: '100%',
-     height: '30px',
-     margin: {
-     item: 20
-     }
-     };*/
-
   }
 }
