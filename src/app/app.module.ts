@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { ComboChartComponent } from './Dashboard/Charts/combochart.component'
 import { DashboardComponent } from './Dashboard/dashboard.component';
-//import { DataTableModule } from 'angular-4-data-table';
 import { FormsModule }   from '@angular/forms';
 import { GoogleComboChartService } from './Services/google-combo-chart.service';
 import { GooglePieChartService } from './Services/google-pie-chart.service';
@@ -15,7 +14,6 @@ import { PieChartComponent } from './Dashboard/Charts/piechart.component'
 import { VisComponent } from './Dashboard/Charts/vis.component';
 import { VistimelineComponent } from './Dashboard/Charts/vistimeline.component';
 import { SurfaceComponent } from './Dashboard/Charts/surface.component';
-//import { HttpModule }    from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -34,7 +32,6 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-//  DataTableModule ,
     FormsModule
   ],
   providers: [GoogleComboChartService,GooglePieChartService, DataService],

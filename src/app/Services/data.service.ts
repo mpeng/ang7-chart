@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Timelinedata } from './../Models/Timelinedata';
-//import { Headers, Http } from '@angular/http';
-//import {Observable} from 'rxjs';
 import { HttpClient, HttpResponse, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { map, catchError, retry } from 'rxjs/operators';
@@ -10,7 +8,6 @@ import { map, catchError, retry } from 'rxjs/operators';
 export class DataService {
   private baseUrl = 'https://rary.lib.id/timelinedata@dev/';
 
-  //constructor(private http: Http) { }
   constructor(private http: HttpClient) { }
 
   getTimelinedata(operator: string = '/getTimelinedata') {
