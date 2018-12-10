@@ -13,7 +13,7 @@ export class DataService {
   //constructor(private http: Http) { }
   constructor(private http: HttpClient) { }
 
-  getData(operator: string = '/getTimelinedata') {
+  getTimelinedata(operator: string = '/getTimelinedata') {
     return this.http.get<Timelinedata[]>(this.baseUrl + operator).pipe(
       catchError(this.handleError)
     );

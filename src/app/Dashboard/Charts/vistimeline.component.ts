@@ -18,19 +18,19 @@ export class VistimelineComponent implements OnInit {
   options: {};
 
   constructor( private dataService: DataService) {
-    this.getData();
+    this.getTimelinedata();
   }
 
   ngOnInit() {}
 
   ngAfterViewInit() {}
 
-  getData(): void {
-    this.dataService.getData()
-      .subscribe(response => this.getTimelineData(response));
+  getTimelinedata(): void {
+    this.dataService.getTimelinedata()
+      .subscribe(response => this.createChart(response));
   }
 
-  getTimelineData(response) {
+  createChart(response) {
 
     /*
     this.data = new DataSet([
