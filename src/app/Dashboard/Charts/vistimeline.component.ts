@@ -1,5 +1,7 @@
 import { AfterViewInit, Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Network, DataSet, Node, Edge, IdType, Timeline } from 'vis';
+import { Timelinedata } from '../../Models/Timelinedata';
+import { DataService } from '../../Services/data.service';
 
 //declare var vis:any;
 
@@ -14,13 +16,22 @@ export class VistimelineComponent implements OnInit {
   tlContainer: any;
   timeline: any;
   data: any;
+  timelinedata: Timelinedata[];
   options: {};
-
+  //dataService: DataService;
+  /*
   constructor() {
+    this.getTimelineData();
+  }
+  */
+
+  constructor( private dataService: DataService) {
+    this.getData();
     this.getTimelineData();
   }
 
   ngOnInit() {
+    this.getData();
   }
 
   ngAfterViewInit() {
@@ -29,10 +40,22 @@ export class VistimelineComponent implements OnInit {
     this.timeline = new Timeline(this.tlContainer, this.data, {});
   }
 
+  getData(): void {
+    this.dataService.getRawData()
+      .then(timelinedata => this.timelinedata = timelinedata );
+      /*
+      .then(function(response){
+          this.data = new DataSet( response );
+          console.log( response );
+      });
+      */
+  }
+
   getTimelineData() {
     // Create a DataSet (allows two way data-binding)
-    //this.data = new vis.DataSet([
-      this.data = new DataSet([
+
+
+    this.data = new DataSet([
       {id: 1, content: 'exam 1', start: '2018-04-20', title: "total images 6"},
       {id: 2, content: 'exam 2', start: '2018-04-14', title: "total images 6"},
       {id: 3, content: 'exam 3', start: '2018-04-18'},
@@ -46,9 +69,10 @@ export class VistimelineComponent implements OnInit {
       {id: 10, content: 'exam 4', start: '2018-05-15', end: '2013-04-19'},
       {id: 11, content: 'exam 5', start: '2018-05-25'},
       {id: 12, content: 'exam 6', start: '2018-05-27'},
-
     ]);
 
+    console.log( "==" + this.timelinedata + "===")
+    //this.data = new DataSet( this.timelinedata );
 
     this.options = {
       editable: true,

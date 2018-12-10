@@ -9,11 +9,13 @@ import { DashboardComponent } from './Dashboard/dashboard.component';
 import { FormsModule }   from '@angular/forms';
 import { GoogleComboChartService } from './Services/google-combo-chart.service';
 import { GooglePieChartService } from './Services/google-pie-chart.service';
+import { DataService } from './Services/data.service';
 import { NgModule } from '@angular/core';
 import { PieChartComponent } from './Dashboard/Charts/piechart.component'
 import { VisComponent } from './Dashboard/Charts/vis.component';
 import { VistimelineComponent } from './Dashboard/Charts/vistimeline.component';
 import { SurfaceComponent } from './Dashboard/Charts/surface.component';
+import { HttpModule }    from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -30,10 +32,11 @@ import { SurfaceComponent } from './Dashboard/Charts/surface.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpModule,
 //  DataTableModule ,
     FormsModule
   ],
-  providers: [GoogleComboChartService,GooglePieChartService],
+  providers: [GoogleComboChartService,GooglePieChartService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
