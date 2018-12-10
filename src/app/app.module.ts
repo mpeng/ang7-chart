@@ -15,7 +15,8 @@ import { PieChartComponent } from './Dashboard/Charts/piechart.component'
 import { VisComponent } from './Dashboard/Charts/vis.component';
 import { VistimelineComponent } from './Dashboard/Charts/vistimeline.component';
 import { SurfaceComponent } from './Dashboard/Charts/surface.component';
-import { HttpModule }    from '@angular/http';
+//import { HttpModule }    from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { HttpModule }    from '@angular/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule,
+    HttpClientModule,
 //  DataTableModule ,
     FormsModule
   ],
