@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Timelinedata } from './../Models/Timelinedata';
+import { Activity } from './../Models/Activity';
 import { HttpClient, HttpResponse, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { map, catchError, retry } from 'rxjs/operators';
@@ -15,6 +16,13 @@ export class DataService {
       catchError(this.handleError)
     );
   }
+
+  getActivityData(operator: string = '/getActivities') {
+    return this.http.get<Activity>(this.baseUrl + operator).pipe(
+      catchError(this.handleError)
+    );
+  }
+
 
   private handleError(error: HttpErrorResponse) {
     console.log(error);

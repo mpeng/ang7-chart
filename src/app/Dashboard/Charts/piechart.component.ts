@@ -2,9 +2,10 @@ import { Component, Input, OnInit } from '@angular/core';
 
 import { GooglePieChartService } from './../../Services/google-pie-chart.service';
 import { PieChartConfig } from './../../Models/PieChartConfig';
+import { DataService } from '../../Services/data.service';
+import * as _ from 'lodash';
 
 declare var google: any;
-
 
 @Component({
   selector: 'pie-chart',
@@ -19,6 +20,6 @@ export class PieChartComponent implements OnInit {
     constructor(private _pieChartService: GooglePieChartService) {}
 
     ngOnInit(): void {
-        this._pieChartService.BuildPieChart(this.elementId, this.data, this.config); 
+      this._pieChartService.BuildPieChart(this.elementId, this.data, this.config);
     }
 }
