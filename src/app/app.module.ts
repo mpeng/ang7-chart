@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { ComboChartComponent } from './Dashboard/Charts/combochart.component'
 import { DashboardComponent } from './Dashboard/dashboard.component';
-import { FormsModule }   from '@angular/forms';
 import { GoogleComboChartService } from './Services/google-combo-chart.service';
 import { GooglePieChartService } from './Services/google-pie-chart.service';
 import { DataService } from './Services/data.service';
@@ -15,6 +14,14 @@ import { VisComponent } from './Dashboard/Charts/vis.component';
 import { VistimelineComponent } from './Dashboard/Charts/vistimeline.component';
 import { SurfaceComponent } from './Dashboard/Charts/surface.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatNativeDateModule } from '@angular/material';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DemoMaterialModule } from './material-module';
+import { TextFieldAutosizeTextareaExample } from './Material/text-field-autosize-textarea-example';
+
+
 
 @NgModule({
   declarations: [
@@ -26,15 +33,21 @@ import { HttpClientModule } from '@angular/common/http';
     VisComponent,
     VistimelineComponent,
     SurfaceComponent,
+    TextFieldAutosizeTextareaExample,
     PieChartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    DemoMaterialModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
     FormsModule
   ],
   providers: [GoogleComboChartService,GooglePieChartService, DataService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
